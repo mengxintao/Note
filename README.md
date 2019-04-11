@@ -40,7 +40,7 @@ get重点在从服务器上获取资源，post重点在向服务器发送数据�
 
 区别二：  
 
-get传输数据是通过URL请求，以field（字段）= value的形式，置于URL后，并用"?"连接，多个请求数据间用"&"连接，如http://mengxintaohenshuai/henshuai?name=admin&password=admin，过程对用户是可见的；
+get传输数据是通过URL请求，以field（字段）= value的形式，置于URL后，并用"?"连接，多个请求数据间用"&"连接，如http://mengxintaohenshuai/henshuai?name=admin&password=admin，  过程对用户是可见的；
 post传输数据通过Http的post机制，将字段与对应值封存在请求实体中发送给服务器，过程对用户是不可见的；  
 
 区别三：  
