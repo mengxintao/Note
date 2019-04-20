@@ -7,13 +7,15 @@ You have 3 cookies and their sizes are big enough to gratify all of the children
 You need to output 2.
 */
 
-public int findContentChildren(int[] g, int[] s) {
-    Arrays.sort(g);
-    Arrays.sort(s);
-    int i = 0, j = 0;
-    while(i < g.length && j < s.length){
-        if(g[i] <= s[j]) i++;
-        j++;
+class Solution {
+public:
+    int findContentChildren(vector<int>& g, vector<int>& s) {
+        int j = 0;
+        sort(g.begin(), g.end());
+        sort(s.begin(), s.end());
+        for (int i = 0; i < s.size() && j < g.size(); ++i) {
+            if (s[i] >= g[j]) ++j;
+        }
+        return j;
     }
-    return i;
-}
+};
