@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int Fibonacci(int n) {
+        if(n==0)return 0;
+        if(n==1) return 1;
+        if(n==2) return 1;
+        int pre1=1,pre2=1,cur;
+      for(int i=3;i<=n;i++)
+      {
+          cur=pre1+pre2;
+          pre2=pre1;
+          pre1=cur;
+      }
+        return cur;
+    }
+};
