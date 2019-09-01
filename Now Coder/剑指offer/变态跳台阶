@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int jumpFloorII(int number) {
+        if(number<=2){
+            return number;
+        }
+        int dp[number+1];
+        dp[1] = 1; 
+        dp[2] = 2; 
+        for (int i = 3; i <= number; i++){
+            dp[i]=0;
+            for (int j = i - 1; j >= 1; j--){
+                dp[i] += dp[j];
+            }
+            dp[i]++;
+        }
+        return dp[number];
+    }
+};
