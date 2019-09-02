@@ -1,0 +1,22 @@
+class Solution {
+public:
+    ListNode* ReverseList(ListNode* pHead) {
+        if(pHead == nullptr)
+            return nullptr;
+         
+        ListNode * pNode = pHead;
+        ListNode * pREHead = nullptr;
+        ListNode * pPre = nullptr;
+         
+        while(pNode != nullptr)
+        {
+            ListNode * pNext = pNode->next;
+            if(pNext == nullptr)
+                pREHead = pNode;
+            pNode->next = pPre;
+            pPre = pNode;
+            pNode = pNext;
+        }
+        return pREHead;
+    }
+};
